@@ -52,7 +52,7 @@ export const createProd = async(req, res)=>{
         const{ nomprod, precio, stock} = req.body;
         await pool.query('insert into producto(nomprod, precio, stock) values($1, $2, $3)', [nomprod, precio, stock]);
         return res.status(200).json(
-            `Usuario ${ nomprod } se ha agregado correctamente...!` //alt 96
+            `El Producto ${ nomprod } se ha agregado correctamente...!` //alt 96
         );
     } catch (e) {
         console.log(e);
